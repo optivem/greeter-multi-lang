@@ -2,7 +2,7 @@ describe('API E2E Test', () => {
   it('getTodos_shouldReturnTodoWithExpectedFormat', async () => {
     // DISCLAIMER: This is an example of a badly written test
     // which unfortunately simulates real-life software test projects.
-    // This is the starting point for our ATDD Accelerator exercises.
+    // This is the starting point for our Greeter exercises.
 
     // Arrange
     const request = 'http://localhost:8080/api/todos/4';

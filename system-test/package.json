@@ -1,7 +1,7 @@
 {
-  "name": "@optivem/atdd-accelerator-template-system-test",
+  "name": "@optivem/greeter-system-test",
   "version": "1.0.0",
-  "description": "ATDD Accelerator Template - System Tests",
+  "description": "Greeter - System Tests",
   "main": "index.js",
   "scripts": {
     "test": "jest"

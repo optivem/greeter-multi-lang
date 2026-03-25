@@ -4,7 +4,7 @@ describe('UI E2E Test', () => {
   it('fetchTodo_shouldDisplayTodoDataInUI', async () => {
     // DISCLAIMER: This is an example of a badly written test
     // which unfortunately simulates real-life software test projects.
-    // This is the starting point for our ATDD Accelerator exercises.
+    // This is the starting point for our Greeter exercises.
 
     const browser: Browser = await chromium.launch();
     const page: Page = await browser.newPage();
