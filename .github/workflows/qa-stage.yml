@@ -50,11 +50,13 @@ jobs:
 
       - name: Deploy System
         id: deploy
-        uses: ./.github/actions/deploy-docker-images
+        uses: optivem/actions/simulate-deployment@v1
         with:
           environment: qa
           version: ${{ inputs.version }}
           image-urls: ${{ needs.resolve-docker-images.outputs.image-urls }}
+          system-url: 'http://localhost:8080/'
+          working-directory: system-test
 
   status-version:
     needs: [deployment]

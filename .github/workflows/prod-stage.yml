@@ -93,11 +93,13 @@ jobs:
 
       - name: Deploy System
         id: deploy
-        uses: ./.github/actions/deploy-docker-images
+        uses: optivem/actions/simulate-deployment@v1
         with:
           environment: production
           version: ${{ needs.generate-production-version.outputs.production-version }}
           image-urls: ${{ needs.tag-docker-images.outputs.image-urls }}
+          system-url: 'http://localhost:8080/'
+          working-directory: system-test
 
   production-release:
     needs: [generate-production-version, tag-docker-images, deploy-docker-images]
