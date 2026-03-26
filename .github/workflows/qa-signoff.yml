@@ -39,7 +39,7 @@ jobs:
       version: ${{ steps.generate-version.outputs.version }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Generate Signoff Status Version
         id: generate-version
@@ -59,7 +59,7 @@ jobs:
       release-url: ${{ steps.create-release.outputs.release-url }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Create Signoff Release
         id: create-release
@@ -80,7 +80,7 @@ jobs:
     
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Determine Stage Result
       id: determine-result

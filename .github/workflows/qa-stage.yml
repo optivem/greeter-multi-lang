@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Deploy System
         id: deploy
@@ -67,7 +67,7 @@ jobs:
       status: deployed
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Generate Status Version
         id: determine-version
@@ -87,7 +87,7 @@ jobs:
       release-url: ${{ steps.create-release.outputs.release-url }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Create Deployment Release
         id: create-release
@@ -109,7 +109,7 @@ jobs:
     
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Generate QA Deployment Stage Summary
       uses: optivem/actions/summarize-system-stage@v1
