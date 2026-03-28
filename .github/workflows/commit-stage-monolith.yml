@@ -64,9 +64,12 @@ jobs:
         run: ./gradlew checkstyleMain
         working-directory: monolith
 
-      # TODO: Implement
       - name: Run Code Analysis
-        run: echo "TODO - not yet implemented"
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: ./gradlew build sonar --info
+        working-directory: monolith
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Build Artifact
         if: github.ref == 'refs/heads/main'
