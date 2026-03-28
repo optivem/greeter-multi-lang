@@ -62,7 +62,7 @@ jobs:
           environment: production
           version: ${{ inputs.version }}
           image-urls: ${{ needs.check.outputs.image-urls }}
-          system-url: 'http://localhost:8080/'
+          system-url: ${{ vars.SYSTEM_URL }}
           working-directory: system-test
 
       - name: Promote RC (Production Deployed)
